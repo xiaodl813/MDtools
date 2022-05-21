@@ -26,7 +26,7 @@ i = 1; % i = 1 : runtimes
 while feof(fileID) == 0
     line_content = fgetl(fileID);
     switch line_content
-        case 'Step Temp c_flux[3]'
+        case 'Step Temp c_flux[3] ' % DONOT REMOVE THE SPACE AT THE END OF THE LINE
             for j = 1 : runsteps
                 flux_content = fgetl(fileID);
                 flux(j, :, i) = cell2mat(textscan(flux_content,'%n %n %n'));
