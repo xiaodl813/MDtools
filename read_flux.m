@@ -29,7 +29,7 @@ while feof(fileID) == 0
         case 'Step Temp c_flux[3] ' % DONOT REMOVE THE SPACE AT THE END OF THE LINE
             for j = 1 : runsteps
                 flux_content = fgetl(fileID);
-                flux(j, :, i) = cell2mat(textscan(flux_content,'%n %n %n'));
+                flux(j, :, i) = num2str(flux_content); % should be speed up
             end
             i = i + 1;
     end
