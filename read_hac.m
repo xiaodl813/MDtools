@@ -1,5 +1,5 @@
 function [hac, parameter] = read_hac(filename)
-% Read Heat Flux AutoCorelation Function file and out put hac matrix
+% Read Heat Flux AutoCorelation Function (HAC) file and out put hac matrix
 %   Input: filename (char)
 %   Output: reshaped hac matrix (double) & parameter structure (double)
 %           `parameter` includes: Tstart, Nc, Ns, M
